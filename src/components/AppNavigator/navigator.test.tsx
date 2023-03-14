@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { screen, fireEvent } from '@testing-library/react-native';
+import { setupStore } from 'src/store';
+import { addTask, removeTask, editTask } from 'src/slices/currentListSlice';
 
-import { renderWithProvider, initialStoreState } from '../../../utils/test/redux';
+import { renderWithProvider } from '../../../utils/test/redux';
 import AppNavigator from './index';
 
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
@@ -9,13 +11,30 @@ jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 const component = <AppNavigator />;
 
 beforeEach(() => {
-  renderWithProvider(component, {
-    preloadedState: initialStoreState
-  });
+  const store = setupStore();
+  store.dispatch(
+    addTask({
+      id: 2,
+      name: 'Mock2',
+      description: '',
+      completed: false
+    })
+  );
+  store.dispatch(editTask({ id: 1, name: 'Example2' }));
+
+  renderWithProvider(component, { store });
+});
+
+afterEach(() => {
+  const store = setupStore();
+  store.dispatch(removeTask(2));
+  store.dispatch(editTask(1));
+
+  renderWithProvider(component, { store });
 });
 
 describe('Testing react navigation', () => {
-  test('page contains the header and 10 items', async () => {
+  test('find Add Task button', async () => {
     const button = await screen.findByText('Add Task');
     expect(button).toBeOnTheScreen();
   });
@@ -28,15 +47,20 @@ describe('Testing react navigation', () => {
     expect(title).toBeOnTheScreen();
   });
   test('taskCard', () => {
-    expect(screen.getAllByTestId('name-list')).toHaveLength(1);
+    expect(screen.getAllByTestId('name-list')).toHaveLength(2);
   });
 
   test('navigation to Detail from task', async () => {
-    const button = screen.getByTestId('name-list');
+    const checkBox = screen.getAllByTestId('checkBox');
+    const button = screen.getAllByTestId('name-list');
 
-    fireEvent(button, 'press');
+    fireEvent(checkBox[0], 'valueChange');
+    fireEvent(button[0], 'press');
+
     const title = await screen.findByText('Name');
+    const name = await screen.findByText('Example2');
 
     expect(title).toBeOnTheScreen();
+    expect(name).toBeOnTheScreen();
   });
 });
