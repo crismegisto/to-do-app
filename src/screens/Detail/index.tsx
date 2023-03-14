@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+import { Text, TextInput, SafeAreaView } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { addTask, editTask } from 'src/slices/currentListSlice';
 import type { RootState } from 'src/store';
+import { formatText } from 'utils/stringUtils';
+import CustomButton from 'components/CustomButton';
 
 import { RoutesParamList } from 'constants/routesParamList';
 
@@ -34,7 +36,7 @@ function TaskDetail() {
         dispatch(
           addTask({
             id: tasks.length !== 0 ? tasks.at(-1)!.id + 1 : 1,
-            name,
+            name: formatText(name),
             description,
             completed: false
           })
@@ -62,9 +64,7 @@ function TaskDetail() {
         />
       </>
 
-      <TouchableOpacity onPress={onSubmit}>
-        <Text>Agregar</Text>
-      </TouchableOpacity>
+      <CustomButton name={params?.id ? 'Save' : 'Add Task'} onSubmit={onSubmit} />
     </SafeAreaView>
   );
 }

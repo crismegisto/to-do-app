@@ -13,17 +13,6 @@ const styles = StyleSheet.create({
     bottom: DEFAULT_SPACE,
     justifyContent: 'center',
     alignItems: 'center'
-  },
-  button: {
-    width: DEFAULT_SPACE * 5,
-    alignItems: 'center',
-    backgroundColor: 'blue',
-    padding: DEFAULT_SPACE / 2,
-    borderRadius: 10
-  },
-  text: {
-    color: 'white',
-    fontWeight: 'bold'
   }
 });
 

@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, FlatList, ListRenderItem, SafeAreaView } from 'react-native';
+import { View, FlatList, ListRenderItem, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import type { RootState } from 'src/store';
 import { useSelector } from 'react-redux';
+import CustomButton from 'components/CustomButton';
 import TaskCard from 'components/TaskCard';
 import { Task } from 'interfaces/task';
 import { ListKeyExtractor } from 'interfaces/global';
@@ -25,9 +26,7 @@ function Home() {
     <SafeAreaView style={styles.container}>
       <FlatList renderItem={renderItem} keyExtractor={keyExtractor} data={tasks} />
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(Routes.Detail)}>
-          <Text style={styles.text}>Add Task</Text>
-        </TouchableOpacity>
+        <CustomButton name="Add Task" onSubmit={() => navigation.navigate(Routes.Detail)} />
       </View>
     </SafeAreaView>
   );
