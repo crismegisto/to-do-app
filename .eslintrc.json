@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["@react-native-community", "prettier"],
+  "plugins": ["import"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": ["internal", "external", "builtin"]
+      }
+    ]
+  }
+}
