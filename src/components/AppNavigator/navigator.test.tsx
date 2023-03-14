@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { screen, fireEvent } from '@testing-library/react-native';
-import { setupStore } from 'src/store';
 import { addTask, removeTask, editTask } from 'src/slices/currentListSlice';
 
+import { setupStore } from '../../../utils/test/store';
 import { renderWithProvider } from '../../../utils/test/redux';
 import AppNavigator from './index';
 

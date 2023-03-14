@@ -1,10 +1,11 @@
 import React from 'react';
 import { ReactElement, ReactNode } from 'react';
 import { Provider } from 'react-redux';
-import { configureStore, PreloadedState, Store } from '@reduxjs/toolkit';
+import { PreloadedState } from '@reduxjs/toolkit';
 import { render, RenderOptions } from '@testing-library/react-native';
-import { setupStore } from 'src/store';
-import type { MockRootState, AppStore } from 'src/store';
+
+import type { MockRootState, AppStore } from './store';
+import { setupStore } from './store';
 
 export const initialStoreState = {
   tasks: {

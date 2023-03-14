@@ -31,7 +31,7 @@ function TaskDetail() {
   const onSubmit = () => {
     if (name) {
       if (params?.id) {
-        dispatch(editTask({ id: params.id, name, description }));
+        dispatch(editTask({ id: params.id, name: formatText(name), description }));
       } else {
         dispatch(
           addTask({
