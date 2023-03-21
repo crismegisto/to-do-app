@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomButton /> Tests match snapshot and button name 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      [
+        {
+          "completed": false,
+          "description": "",
+          "id": 1,
+          "labels": [
+            "family",
+            "work",
+          ],
+          "name": "Mock",
+        },
+        {
+          "completed": false,
+          "description": "",
+          "id": 2,
+          "labels": [
+            "work",
+          ],
+          "name": "Example",
+        },
+      ]
+    }
+    extraData={
+      [
+        {
+          "completed": false,
+          "description": "",
+          "id": 1,
+          "labels": [
+            "family",
+            "work",
+          ],
+          "name": "Mock",
+        },
+        {
+          "completed": false,
+          "description": "",
+          "id": 2,
+          "labels": [
+            "work",
+          ],
+          "name": "Example",
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 10,
+              "borderWidth": 2,
+              "flex": 1,
+              "flexDirection": "row",
+              "margin": 10,
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              accessibilityRole="checkbox"
+              accessibilityState={
+                {
+                  "checked": false,
+                  "disabled": false,
+                }
+              }
+              accessibilityValue={
+                {
+                  "text": "off",
+                }
+              }
+              accessible={true}
+              pointerEvents="auto"
+              testID="checkBox"
+            >
+              <RNCCheckbox
+                forwardedRef={null}
+                onValueChange={[Function]}
+                style={
+                  [
+                    {
+                      "backgroundColor": "transparent",
+                      "height": 32,
+                      "width": 32,
+                    },
+                    undefined,
+                  ]
+                }
+                value={false}
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "flex": 1,
+                "height": "100%",
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "marginHorizontal": 10,
+                }
+              }
+              testID="name-list"
+            >
+              Mock
+            </Text>
+            <View
+              data={
+                [
+                  "family",
+                  "work",
+                ]
+              }
+              getItem={[Function]}
+              getItemCount={[Function]}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
+            >
+              <View
+                onFocusCapture={[Function]}
+                onLayout={[Function]}
+                style={null}
+              >
+                <Text>
+                  family
+                </Text>
+              </View>
+              <View
+                onFocusCapture={[Function]}
+                onLayout={[Function]}
+                style={null}
+              >
+                <Text>
+                  work
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="deleteButton"
+          >
+            <Image
+              resizeMode="contain"
+              source={
+                {
+                  "testUri": "../../../src/assets/trash.png",
+                }
+              }
+              style={
+                {
+                  "height": 24,
+                  "tintColor": "red",
+                  "width": 24,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 10,
+              "borderWidth": 2,
+              "flex": 1,
+              "flexDirection": "row",
+              "margin": 10,
+              "paddingHorizontal": 10,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "padding": 5,
+              }
+            }
+          >
+            <View
+              accessibilityRole="checkbox"
+              accessibilityState={
+                {
+                  "checked": false,
+                  "disabled": false,
+                }
+              }
+              accessibilityValue={
+                {
+                  "text": "off",
+                }
+              }
+              accessible={true}
+              pointerEvents="auto"
+              testID="checkBox"
+            >
+              <RNCCheckbox
+                forwardedRef={null}
+                onValueChange={[Function]}
+                style={
+                  [
+                    {
+                      "backgroundColor": "transparent",
+                      "height": 32,
+                      "width": 32,
+                    },
+                    undefined,
+                  ]
+                }
+                value={false}
+              />
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "flex": 1,
+                "height": "100%",
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              style={
+                {
+                  "marginHorizontal": 10,
+                }
+              }
+              testID="name-list"
+            >
+              Example
+            </Text>
+            <View
+              data={
+                [
+                  "work",
+                ]
+              }
+              getItem={[Function]}
+              getItemCount={[Function]}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={[]}
+              viewabilityConfigCallbackPairs={[]}
+            >
+              <View
+                onFocusCapture={[Function]}
+                onLayout={[Function]}
+                style={null}
+              >
+                <Text>
+                  work
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "opacity": 1,
+              }
+            }
+            testID="deleteButton"
+          >
+            <Image
+              resizeMode="contain"
+              source={
+                {
+                  "testUri": "../../../src/assets/trash.png",
+                }
+              }
+              style={
+                {
+                  "height": 24,
+                  "tintColor": "red",
+                  "width": 24,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "bottom": 20,
+        "height": 40,
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "blue",
+          "borderRadius": 10,
+          "opacity": 1,
+          "padding": 10,
+          "width": 100,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Add Task
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

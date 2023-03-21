@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Detail snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "flex": 1,
+      "margin": 14,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Name
+  </Text>
+  <TextInput
+    accessibilityLabel="name input"
+    maxLength={30}
+    onChangeText={[Function]}
+    style={
+      {
+        "borderWidth": 1,
+        "height": 40,
+        "marginVertical": 12,
+        "padding": 10,
+      }
+    }
+    value="Mock"
+  />
+  <Text
+    style={
+      {
+        "fontSize": 16,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Description (optional)
+  </Text>
+  <TextInput
+    maxLength={120}
+    multiline={true}
+    onChangeText={[Function]}
+    style={
+      {
+        "borderWidth": 1,
+        "height": 100,
+        "marginVertical": 12,
+        "padding": 10,
+      }
+    }
+    value=""
+  />
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "blue",
+        "borderRadius": 10,
+        "opacity": 1,
+        "padding": 10,
+        "width": 100,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "white",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Save
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;

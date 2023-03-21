@@ -3,20 +3,14 @@ import { ReactElement, ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { PreloadedState } from '@reduxjs/toolkit';
 import { render, RenderOptions } from '@testing-library/react-native';
+import { initialData } from 'slices/currentListSlice';
 
 import type { MockRootState, AppStore } from './store';
 import { setupStore } from './store';
 
 export const initialStoreState = {
   tasks: {
-    currentList: [
-      {
-        id: 1,
-        name: 'Mock',
-        description: '',
-        completed: false
-      }
-    ]
+    currentList: initialData
   }
 };
 

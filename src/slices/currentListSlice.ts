@@ -6,15 +6,25 @@ interface CurrentListState {
   currentList: Task[];
 }
 
+export const initialData = [
+  {
+    id: 1,
+    name: 'Mock',
+    description: '',
+    completed: false,
+    labels: ['family', 'work']
+  },
+  {
+    id: 2,
+    name: 'Example',
+    description: '',
+    completed: false,
+    labels: ['work']
+  }
+];
+
 const initialState: CurrentListState = {
-  currentList: [
-    {
-      id: 1,
-      name: 'Example',
-      description: '',
-      completed: false
-    }
-  ]
+  currentList: initialData
 };
 
 export const currentListSlice = createSlice({

@@ -50,7 +50,13 @@ function TaskDetail() {
     <SafeAreaView style={styles.container}>
       <>
         <Text style={styles.title}>Name</Text>
-        <TextInput style={styles.input} onChangeText={setName} value={name} maxLength={30} />
+        <TextInput
+          style={styles.input}
+          onChangeText={setName}
+          value={name}
+          maxLength={30}
+          accessibilityLabel="name input"
+        />
       </>
 
       <>

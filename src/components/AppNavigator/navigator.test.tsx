@@ -14,13 +14,14 @@ beforeEach(() => {
   const store = setupStore();
   store.dispatch(
     addTask({
-      id: 2,
+      id: 3,
       name: 'Mock2',
       description: '',
-      completed: false
+      completed: false,
+      labels: ['familiy']
     })
   );
-  store.dispatch(editTask({ id: 1, name: 'Example2' }));
+  store.dispatch(editTask({ id: 1, name: 'Example2', labels: ['family'] }));
 
   renderWithProvider(component, { store });
 });
